@@ -36,15 +36,15 @@
     </section>
 
     <section class="imgs">
-            <img src="/img/pic1.jpg" alt="astronaut on the moon">
-            <img src="/img/pic2.jpg" alt="astronaut in space">
+            <img src="/img/pic1.jpg" class="pic" alt="astronaut on the moon">
+            <img src="/img/pic2.jpg" class="pic" alt="astronaut in space">
     </section>
 
     <section class="whyUs">
         <h3> why us</h3>
         <div class="iconCon">
             
-        <figure class="icons column">
+        <figure class="icons">
             <img src="/img/icons/transportation (1).svg" alt="rocket icon">
             <figcaption>anywhere you want in one day</figcaption>
             <p>Have you always wanted to go to outer space,
@@ -52,7 +52,7 @@
                 we do it in one day. That's a promise.</p>
             </figure>
             
-            <figure class="icons column">
+            <figure class="icons">
                 <img src="/img/icons/ui.svg" alt="planet icon">
                 <figcaption>no visa needed to pay</figcaption>
                 <p>We accept everything regarding payment for your space travel.
@@ -60,7 +60,7 @@
                 </p>
             </figure>
             
-            <figure class="icons column">
+            <figure class="icons">
                 <img src="/img/icons//trophy.svg" alt="planet icon">
                 <figcaption>award winning safety</figcaption>
                 <p>When traveling with <span id="spaced">SPACED</span>, 
@@ -69,16 +69,77 @@
             </figure>
             
             <img src="/img/pic3.jpg" class="pic"  alt="picture of a rocket">
-            
-            <button class="btn column"> book your travel</button>
 
+            <button class="btn btnIcons"> book your travel</button>
 
            </div>
-           
-            
 
         </section>
-    
+
+        <section class="desrination">
+            <h3>our destinations</h3>
+            <div class='slider activeSlide' id='01' >
+                <div class="place colunm">
+                        <span class="new">NEW</span>
+                        <h1>the moon</h1>
+                        <p>Are you raedy to go do some moonjumps?
+                            Strap on your moonboots and get ready to
+                            have some fun on the low gravity planet.
+                        </p>
+
+                        <button class="btn"> take me to the moon</button>
+                </div>
+                <div class="colunm moonPic">
+                    <img src="/img/black-moon.png" alt="picture of the moon">
+                </div>
+            </div>
+
+            <div class='slider' id='02'>
+                <div class="place colunm">
+                    <span class="new">NEW</span>
+                    <h1>mars</h1>
+                    <p>Are you raedy to go do some moonjumps?
+                        Strap on your moonboots and get ready to
+                        have some fun on the low gravity planet.
+                    </p>
+                    
+                    <button class="btn"> take me to mars</button>
+                </div>
+                <div class="colunm moonPic">
+                    <img src="/img/mars.png" alt="picture of the moon">
+                </div>
+            </div>
+            
+            <div class='slider' id='03'>
+                <div class="place colunm">
+                    <span class="new">NEW</span>
+                    <h1>saturn</h1>
+                    <p>Are you raedy to go do some moonjumps?
+                        Strap on your moonboots and get ready to
+                        have some fun on the low gravity planet.
+                    </p>
+                    
+                    <button class="btn"> take me to saturn</button>
+                </div>
+                <div class="colunm moonPic" id="saturn">
+                    <img  src="/img/saturn.png" alt="picture of saturn">
+                </div>
+            </div>
+
+            <div class="navBar">
+                    <button class="arrows"><img src="/img/left.png" id="left" alt="left arrow"></button>
+                    <button class="arrows"><img src="/img/right.png" id="right" alt="right arrow"></button>
+                    <div class="spaceBox"></div>
+                    <span class="numbers active" rel='01'>01</span>
+                    <div class="line"></div>
+                    <button><span class="numbers" rel='02'>02</span></button>
+                    <button><span class="numbers"rel='03'>03</span></button>
+
+                </div>
+
+        </section>
+        
+        
     <script src="./main.js"></script>
 </body>
 </html>
