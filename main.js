@@ -28,25 +28,24 @@ let arrowLeft = document.getElementById('left');
 let arrowRight = document.getElementById('right');
 let activeOne = document.getElementById('active');
 let numbList = [...document.querySelectorAll('.numbers')];
+let numBtn = [...document.getElementsByClassName('numBtn')];
 
+//right arrow event
 arrowRight.addEventListener('click', ()=>{
     rightAttow(numbList);
-    changeSlide();
-
+    changeSlideRight();
 });
 
 
-arrowLeft.addEventListener('click', ()=>{
-    
+//left arrow event
+arrowLeft.addEventListener('click', ()=>{  
     leftArrow(numbList);
-    changeSlide();
-    
-
+    changeSlideLeft()
 });
 
 
 
-
+// arrow functions
 function rightAttow(numbList){
     let first = numbList[0].innerHTML;
     let firstElement = numbList[0];
@@ -86,10 +85,54 @@ function leftArrow(numbList){
 
 }
 
-function changeSlide(){
-    document.getElementsByClassName('activeSlide')[0].classList.remove('activeSlide');
-    let SliderToShow = [...document.getElementsByClassName('active')][0].getAttribute('rel');
+// changing the slides and add aminations
 
-    let newSlide = document.getElementById(SliderToShow);
+function changeSlideRight(){
+    let currentSlide = document.getElementsByClassName('activeSlide');
+    let Slidernumber = [...document.getElementsByClassName('active')][0].getAttribute('rel');
+    let newSlide = document.getElementById(Slidernumber);
+
+    currentSlide[0].classList.remove('activeSlide');
+    
+    newSlide.classList.add('movingInRight');
     newSlide.classList.add('activeSlide');
+
+    setTimeout(function() {
+        newSlide.classList.remove('movingInRight');
+      }, 400);
+
+
+    
 }
+
+function changeSlideLeft(){
+    let currentSlide = document.getElementsByClassName('activeSlide');
+    let Slidernumber = [...document.getElementsByClassName('active')][0].getAttribute('rel');
+    let newSlide = document.getElementById(Slidernumber);
+
+    currentSlide[0].classList.remove('activeSlide');
+    
+    newSlide.classList.add('movingInLeft');
+    newSlide.classList.add('activeSlide');
+
+    setTimeout(function() {
+        newSlide.classList.remove('movingInLeft');
+      }, 400);
+}
+
+
+
+
+// event for the numbers in the slider
+
+numBtn[0].addEventListener('click', () => {
+    rightAttow(numbList);
+    changeSlideRight();
+});
+
+numBtn[1].addEventListener('click', () => {
+    leftArrow(numbList);
+    changeSlideRight();
+})
+
+

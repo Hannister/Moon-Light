@@ -4,6 +4,11 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+*:focus {
+    outline: 0 !important;
+}
+
 body{
     background-image: url(/img/starBG.jpg);
     min-height: 2000px;
@@ -237,6 +242,7 @@ h3{
     cursor: pointer;
     text-transform: uppercase;
     letter-spacing: 3px;
+    outline: 0; 
 }
 
 .btn:before, 
@@ -274,16 +280,43 @@ h3{
     height: 60px;
 }
 
+.btn:focus , .btn:active {
+    outline: 0;
+    box-shadow: none;
+  }
+
 .desrination{
     margin: 200px 300px;
 }
 
 .slider{
     display: none;
+    position: relative;
 }
 .activeSlide{
     display: flex;
 }
+
+.movingInRight{
+    animation: fromTheRight 0.5s ease-out 1; 
+}
+
+.movingInLeft{
+    animation: toTheRight 0.5s ease-out 1; 
+}
+
+
+@keyframes toTheRight{
+    from {left: 2000px;}
+  to {left: 0px; }
+}
+
+@keyframes fromTheRight{
+    from {left: -2000px;}
+  to {left: 0px; }
+}
+
+
 
 .colunm{
     flex: 50%;
@@ -389,7 +422,7 @@ h3{
 
 
 #saturn{
-    left: 100px;
+    left: 150px;
 }
 
 #\30 3 > div.place.colunm > p{
